@@ -26,7 +26,6 @@ class LabeledConceptsDCATAPProfile(RDFProfile):
         values which are URIs with their corresponding labels."""
         concept_dict = next((d for d in dataset_dict.get('extras', [])
                              if d['key'] == key), {})
-        print(concept_dict)
         try:
             is_list = True
             concept_uris = json.loads(concept_dict.get('value', '[]'))
